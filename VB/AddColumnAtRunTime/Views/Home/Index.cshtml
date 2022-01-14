@@ -1,7 +1,7 @@
-@Code
-    ViewBag.Title = "Index"
-    Layout = "~/Views/Shared/_Layout.vbhtml"
-End Code
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 @Html.Partial("GridPartial", DisplayDetailInPopupWindow.Models.CustomerRepository.GetCustomers())
 

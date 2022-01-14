@@ -1,0 +1,17 @@
+@model System.Data.DataTable
+
+@Html.DevExpress().GridView(settings => {
+    settings.Name = "grid";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "GridAction" };
+    settings.KeyFieldName = "CustomerID";
+    settings.DataBound = (sender, e) => {
+        MVCxGridView grid = sender as MVCxGridView;
+        if (grid.Columns.IndexOf(grid.Columns["CommandColumn"]) != -1)
+            return;
+        GridViewCommandColumn col = new GridViewCommandColumn();
+        col.Name = "CommandColumn";
+        col.ShowSelectCheckbox = true;
+        col.VisibleIndex = 0;
+        grid.Columns.Add(col);
+    };
+}).Bind(Model).GetHtml()
