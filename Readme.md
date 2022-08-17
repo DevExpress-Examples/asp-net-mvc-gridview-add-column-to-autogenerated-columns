@@ -3,9 +3,9 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E20054)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# GridView for MVC - How to add a column if the AutoGenerateColumns property is set to true
+# GridView for ASP.NET MVC - How to add a column if the AutoGenerateColumns property is set to true
 
-When the [AutoGenerateColumns](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.AutoGenerateColumns) property is set to `true`, handle the [GridViewSettings.DataBound](http://docs.devexpress.devx/AspNetMvc/DevExpress.Web.Mvc.GridSettingsBase.DataBound) event to add a column to the GridView. Before adding the column, check whether a column already exists to avoid duplicate columns.
+When the [`AutoGenerateColumns`](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.AutoGenerateColumns) property is set to `true`, handle the [`GridViewSettings.DataBound`](http://docs.devexpress.devx/AspNetMvc/DevExpress.Web.Mvc.GridSettingsBase.DataBound) event to add a column to the Grid View. Before adding the column, check whether a column already exists to avoid duplicate columns.
 
 ```cshtml
 settings.DataBound = (sender, e) => {
