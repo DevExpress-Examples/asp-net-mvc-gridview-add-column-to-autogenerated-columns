@@ -1,1 +1,1 @@
-<%@ Application Codebehind="Global.asax.cs" Inherits="DisplayDetailInPopupWindow.MvcApplication" Language="C#" %>
+<%@ Application Codebehind="Global.asax.vb" Inherits="DisplayDetailInPopupWindow.MvcApplication" Language="VB" %>
